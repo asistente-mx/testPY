@@ -66,7 +66,7 @@ class HttpWSSProtocol(websockets.WebSocketServerProtocol):
             cmd,value = state.split("@")
             
             if cmd == 'temperatura':
-                state = str(value) + ' grados'
+                state = value
             elif cmd == 'humedad':
                 state = value
             elif cmd == 'tinaco':
