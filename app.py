@@ -65,13 +65,13 @@ class HttpWSSProtocol(websockets.WebSocketServerProtocol):
             
             cmd,value = state.split("@")
             
-            if cmd == 'temperatura' :
+            if cmd == 'temperatura':
                 state = value + ' grados'
-            elif cmd == 'humedad' :
+            elif cmd == 'humedad':
                 state = value
-            elif cmd == 'tinaco' :
+            elif cmd == 'tinaco':
                 state = value
-            else
+            else:
                 state = 'Listo!'
             
             self.rddata = '{"speech":' + state + '", "displayText": "resultado: '+state+'"}'
